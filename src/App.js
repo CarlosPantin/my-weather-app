@@ -38,7 +38,7 @@ function App() {
   return (
     <div className="weather-app">
       <SearchBar onAdd={handleAdd} />
-      <div className="container">
+      <div className=" container">
         {weatherData.map((data, index) => (
           <WeatherDisplay key={index} weatherData={data} />
         ))}
