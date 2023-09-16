@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
+import './SearchBar.css'; // You may need to create a separate CSS file for styling.
 
-function SearchBar({ onSearch }) {
-  const [query, setQuery] = useState('');
+function SearchBar({ onAdd }) {
+  const [value, setValue] = useState('');
 
-  const handleInputChange = (e) => {
-    const inputText = e.target.value;
-    setQuery(inputText);
-  };
-
-  const handleSearch = () => {
-    onSearch(query);
+  const handleAdd = () => {
+    if (value) {
+      onAdd(value);
+      setValue(''); // Clear the input field after adding a city
+    }
   };
 
   return (
@@ -17,10 +16,12 @@ function SearchBar({ onSearch }) {
       <input
         type="text"
         placeholder="Enter a location"
-        value={query}
-        onChange={handleInputChange}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
       />
-      <button className='search-button' onClick={handleSearch}>Search</button>
+      <button className="add-button" onClick={handleAdd}>
+        Add
+      </button>
     </div>
   );
 }

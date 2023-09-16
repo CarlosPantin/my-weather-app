@@ -18,6 +18,8 @@ function WeatherDisplay({ weatherData }) {
   const gradientBackground = weatherGradients[iconCode] || 'linear-gradient(to bottom, #0074d9, #7FDBFF)';
 
   return (
+
+  <div className="weathergrid"> 
     <div className="weather-container" style={{ background: gradientBackground }}> {/* Add the container class here */}
       <p className="location">{location}</p>
       <img className="icon" src={iconUrl} alt="Weather Icon" />
@@ -25,6 +27,7 @@ function WeatherDisplay({ weatherData }) {
       <p className="conditions">{conditions} </p>
      
     </div>
+  </div>
   );
 }
 

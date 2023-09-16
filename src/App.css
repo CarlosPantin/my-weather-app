@@ -41,5 +41,12 @@ align-items: center;
 
 body {
   
-  background: linear-gradient(#940694, #6b2649);
+  background: linear-gradient(#940694, #6b2649);;
+  /* background: linear-gradient(#940694, #6b2649); */
 }
+
+.noweather {
+  margin-bottom: 900px;
+}
+
+
