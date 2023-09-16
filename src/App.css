@@ -2,12 +2,13 @@
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
+  
 }
 
 /* Style the search bar container */
 .search-bar {
  display: flex;
-  align-items: center;
+align-items: center;
 }
 
 .search-input {
@@ -26,31 +27,6 @@
   border-radius: 5px;
 }
 
-/* Style the suggestion dropdown container */
-.suggestion-dropdown {
-  position: absolute; /* Position absolute for dropdown placement */
-  top: 100%; /* Position below the input field */
-  left: 0;
-  right: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-top: none;
-  border-radius: 0 0 5px 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1; /* Ensure the dropdown appears above other elements */
-  display: none; /* Initially hide the dropdown */
-}
-
-/* Style individual suggestion items */
-.suggestion-list li {
-  padding: 5px;
-  cursor: pointer;
-}
-
-/* Style selected suggestion on hover */
-.suggestion-list li:hover {
-  background-color: #f0f0f0;
-}
 
 /* Style the search button */
 .search-bar button {
@@ -63,26 +39,7 @@
   cursor: pointer;
 }
 
-/* Style the suggestions list */
-.suggestion-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Style individual suggestion items */
-.suggestion-list li {
-  padding: 5px;
-  cursor: pointer;
-}
-
-/* Style selected suggestion on hover */
-.suggestion-list li:hover {
-  background-color: #f0f0f0;
-}
-
 body {
-  background-color: #87ceeb; /* Sky blue color */
-  margin: 0; /* Remove default margin */
-  padding: 0; /* Remove default padding */
+  
+  background: linear-gradient(#940694, #6b2649);
 }

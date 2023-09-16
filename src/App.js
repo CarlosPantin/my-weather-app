@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import SearchBar from './components/SearchBar';
 import WeatherDisplay from './components/WeatherDisplay';
-import './App.css'; // Import the CSS file
+import './App.css';
 
 const API_KEY = '696f7d5f01253999ec97f2696afa5a8d';
 const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
