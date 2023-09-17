@@ -6,7 +6,7 @@ import weatherGradients from './weatherGradients';
 function WeatherDisplay({ weatherData }) {
   if (!weatherData) {
     return (
-      <div className="nodata"> 
+      <div> 
         <p>No weather data available!</p>
       </div>
     );

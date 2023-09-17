@@ -57,9 +57,6 @@ flex: 1; /* Distribute available space equally among containers */
 
 }
 
-.nodata {
-margin-bottom: 700px;
-}
 
 .container {
 display: flex; /* Use flexbox for horizontal layout */
