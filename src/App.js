@@ -8,7 +8,7 @@ const API_KEY = '696f7d5f01253999ec97f2696afa5a8d';
 const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 function App() {
-  const [weatherData, setWeatherData] = useState([]);
+  const [weatherData, setWeatherData] = useState([]); 
 
   useEffect(() => {
     const storedWeatherData = localStorage.getItem('weatherData');

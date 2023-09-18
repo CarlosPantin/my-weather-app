@@ -14,7 +14,7 @@ function WeatherDisplay({ weatherData, onDelete }) {
     );
   }
 
-  const { temperature, location, conditions, iconCode } = weatherData;
+  const { temperature, location, conditions, iconCode, minTemp} = weatherData;
 
   const iconUrl = weatherIcons[iconCode] || 'default.png';
   const gradientBackground = weatherGradients[iconCode] || 'linear-gradient(to bottom, #0074d9, #7FDBFF)';
