@@ -2,8 +2,10 @@ import React from 'react';
 import './WeatherDisplay.css';
 import weatherIcons from './weatherIcons';
 import weatherGradients from './weatherGradients';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
-function WeatherDisplay({ weatherData }) {
+function WeatherDisplay({ weatherData, onDelete }) {
   if (!weatherData) {
     return (
       <div> 
@@ -13,14 +15,18 @@ function WeatherDisplay({ weatherData }) {
   }
 
   const { temperature, location, conditions, iconCode } = weatherData;
-  const iconUrl = weatherIcons[iconCode] || 'default.png';
 
+  const iconUrl = weatherIcons[iconCode] || 'default.png';
   const gradientBackground = weatherGradients[iconCode] || 'linear-gradient(to bottom, #0074d9, #7FDBFF)';
 
+  const handleDelete = () => {
+    onDelete(weatherData);
+  };
   return (
 
   <div className="weathergrid"> 
-    <div className="weather-container" style={{ background: gradientBackground }}> {/* Add the container class here */}
+   <div className="delete-button" onClick={handleDelete}><FontAwesomeIcon icon={faTrash} /></div>
+    <div className="weather-container" style={{ background: gradientBackground }}> 
       <p className="location">{location}</p>
       <img className="icon" src={iconUrl} alt="Weather Icon" />
       <p className="temperature">{temperature}°C</p>

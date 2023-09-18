@@ -12,7 +12,7 @@
     margin-right: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    outline: none; /* Remove input outline on focus */
+    outline: none; 
   }
   
   button.add-button {
