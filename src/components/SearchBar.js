@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './SearchBar.css'; // You may need to create a separate CSS file for styling.
+import './SearchBar.css'; 
 
 function SearchBar({ onAdd }) {
   const [value, setValue] = useState('');
@@ -7,7 +7,7 @@ function SearchBar({ onAdd }) {
   const handleAdd = () => {
     if (value) {
       onAdd(value);
-      setValue(''); // Clear the input field after adding a city
+      setValue(''); 
     }
   };
 

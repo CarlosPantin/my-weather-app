@@ -5,7 +5,7 @@
 }
 
 .location {
-  font-size: 1rem; 
+  font-size: 2rem; 
   color: white; 
   margin: 0;
 }
@@ -14,7 +14,7 @@
   font-size: 2rem;
   color: white;
   margin: 0;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 .icon{
@@ -57,17 +57,24 @@ flex-wrap: wrap;
 
 }
 
-.delete-button {
+.delete-button, .refresh-button {
   cursor: pointer;
   color: red; 
   font-size: 20px;
 }
 
-.delete-button:hover {
+.delete-button:hover, .refresh-button:hover {
   color: darkred; 
 }
 
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+}
 
+.delete-button{
+  margin-right: 5rem;
+}
 
 
 
