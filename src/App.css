@@ -5,20 +5,20 @@
   
 }
 
-/* Style the search bar container */
+
 .search-bar {
  display: flex;
 align-items: center;
 }
 
 .search-input {
-  width: 200px; /* Adjust the width as needed */
-  height: 30px; /* Adjust the height as needed */
-  padding: 5px; /* Adjust the padding as needed */
-  font-size: 1rem; /* Adjust the font size as needed */
+  width: 200px; 
+  height: 30px; 
+  padding: 5px;
+  font-size: 1rem; 
 }
 
-/* Style the input field */
+
 .search-bar input {
   padding: 10px;
   font-size: 16px;
@@ -28,7 +28,7 @@ align-items: center;
 }
 
 
-/* Style the search button */
+
 .search-bar button {
   padding: 10px 20px;
   font-size: 16px;
@@ -42,7 +42,6 @@ align-items: center;
 body {
   
   background: linear-gradient(#a4db40, #3c50d1);;
-  /* background: linear-gradient(#940694, #6b2649); */
 }
 
 .noweather {

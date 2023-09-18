@@ -47,11 +47,9 @@ function App() {
   };
 
   const handleDelete = (cardToDelete) => {
-    // Filter the weatherData array to remove the card
+    
     const updatedWeatherData = weatherData.filter((card) => card !== cardToDelete);
     setWeatherData(updatedWeatherData);
-
-    // Save the updated data to local storage
     localStorage.setItem('weatherData', JSON.stringify(updatedWeatherData));
   };
 
