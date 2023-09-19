@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import SearchBar from './components/SearchBar';
-import WeatherDisplay from './components/WeatherDisplay';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import SearchBar from "./components/SearchBar";
+import WeatherDisplay from "./components/WeatherDisplay";
+import "./App.css";
 
-const API_KEY = '696f7d5f01253999ec97f2696afa5a8d';
-const API_URL = 'https://api.openweathermap.org/data/2.5/weather';
+const API_KEY = "696f7d5f01253999ec97f2696afa5a8d";
+const API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
 function App() {
   const [weatherData, setWeatherData] = useState([]);
@@ -13,10 +13,11 @@ function App() {
   const fetchWeatherData = (location) => {
     const apiUrl = `${API_URL}?q=${location}&appid=${API_KEY}&units=metric`;
 
-    axios.get(apiUrl)
+    axios
+      .get(apiUrl)
       .then((response) => {
         const { data } = response;
-        console.log('API Response:', data);
+        console.log("API Response:", data);
 
         const newCard = {
           temperature: data.main.temp,
@@ -28,15 +29,15 @@ function App() {
         const updatedWeatherData = [...weatherData, newCard];
         setWeatherData(updatedWeatherData);
 
-        localStorage.setItem('weatherData', JSON.stringify(updatedWeatherData));
+        localStorage.setItem("weatherData", JSON.stringify(updatedWeatherData));
       })
       .catch((error) => {
-        console.error('Error fetching weather data:', error);
+        console.error("Error fetching weather data:", error);
       });
   };
 
   useEffect(() => {
-    const storedWeatherData = localStorage.getItem('weatherData');
+    const storedWeatherData = localStorage.getItem("weatherData");
     if (storedWeatherData) {
       setWeatherData(JSON.parse(storedWeatherData));
     }
@@ -49,22 +50,24 @@ function App() {
   };
 
   const handleDelete = (cardToDelete) => {
-    const updatedWeatherData = weatherData.filter((card) => card !== cardToDelete);
+    const updatedWeatherData = weatherData.filter(
+      (card) => card !== cardToDelete
+    );
     setWeatherData(updatedWeatherData);
 
-   
-    localStorage.setItem('weatherData', JSON.stringify(updatedWeatherData));
+    localStorage.setItem("weatherData", JSON.stringify(updatedWeatherData));
   };
 
   const handleRefresh = (location) => {
     if (location) {
       const apiUrl = `${API_URL}?q=${location}&appid=${API_KEY}&units=metric`;
-
-      axios.get(apiUrl)
+  
+      axios
+        .get(apiUrl)
         .then((response) => {
           const { data } = response;
-          console.log('API Response:', data);
-
+          console.log("API Response:", data);
+  
           const updatedWeatherData = weatherData.map((card) => {
             if (card.location === location) {
               return {
@@ -76,11 +79,14 @@ function App() {
             }
             return card;
           });
-
+  
           setWeatherData(updatedWeatherData);
+  
+          // Update local storage with the latest data after refresh
+          localStorage.setItem("weatherData", JSON.stringify(updatedWeatherData));
         })
         .catch((error) => {
-          console.error('Error fetching weather data:', error);
+          console.error("Error fetching weather data:", error);
         });
     }
   };
@@ -103,9 +109,3 @@ function App() {
 }
 
 export default App;
-
-
-
-
-
-

@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import './SearchBar.css'; 
+import React, { useState } from "react";
+import "./SearchBar.css";
 
 function SearchBar({ onAdd }) {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
   const handleAdd = () => {
     if (value) {
       onAdd(value);
-      setValue(''); 
+      setValue("");
     }
   };
 

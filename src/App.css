@@ -2,22 +2,19 @@
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
-  
 }
 
-
 .search-bar {
- display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .search-input {
-  width: 200px; 
-  height: 30px; 
+  width: 200px;
+  height: 30px;
   padding: 5px;
-  font-size: 1rem; 
+  font-size: 1rem;
 }
-
 
 .search-bar input {
   padding: 10px;
@@ -26,8 +23,6 @@ align-items: center;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
-
-
 
 .search-bar button {
   padding: 10px 20px;
@@ -40,12 +35,9 @@ align-items: center;
 }
 
 body {
-  
-  background: linear-gradient(#5cb5f8, #3c50d1);;
+  background: linear-gradient(#5cb5f8, #3c50d1);
 }
 
 .noweather {
   margin-bottom: 900px;
 }
-
-
